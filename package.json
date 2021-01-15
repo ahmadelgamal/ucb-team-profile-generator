@@ -1,0 +1,37 @@
+{
+  "name": "ucb-team-profile-generator",
+  "version": "1.0.0",
+  "description": "A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadelgamal/ucb-team-profile-generator.git"
+  },
+  "keywords": [
+    "jest",
+    "node",
+    "node.js",
+    "test",
+    "testing",
+    "employee",
+    "team",
+    "hr",
+    "personnel",
+    "summary",
+    "profile"
+  ],
+  "author": "Ahmad El Gamal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadelgamal/ucb-team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/ahmadelgamal/ucb-team-profile-generator#readme",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "inquirer": "^7.3.3"
+  }
+}
