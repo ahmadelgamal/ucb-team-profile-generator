@@ -4,6 +4,12 @@ const questions = require('./src/questions');
 const writeToFile = require('./src/writeToFile');
 const generateHTML = require('./src/generateHTML');
 
+// import and config for ascii-art
+const logo = require('asciiart-logo');
+const config = require('./package.json');
+// prints splash screen
+console.log(logo(config).render());
+
 const start = () => {
   return inquirer
     .prompt(questions)
