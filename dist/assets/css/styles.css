@@ -38,6 +38,7 @@ h1 {
   width: 80%;
   border: 1px solid;
   box-shadow: 2px 2px grey;
+  background-color: #eeeeee;
 }
 
 .blue-bg {
@@ -59,8 +60,7 @@ h4 {
 }
 
 .grey-bg {
-  padding: 20px;
-  background-color: #eeeeee;
+  padding: 30px 15px;
 }
 
 ul li {
