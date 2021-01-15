@@ -103,7 +103,6 @@ function generateHTML(data) {
     ></script>
   </body>
 </html>
-
 `;
 }
 
