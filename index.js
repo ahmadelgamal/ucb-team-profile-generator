@@ -1,8 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const questions = require('./utils/questions');
-const writeToFile = require('./utils/writeToFile');
-const generateHTML = require('./utils/generateHTML');
+const questions = require('./src/questions');
+const writeToFile = require('./src/writeToFile');
+const generateHTML = require('./src/generateHTML');
 
 const start = () => {
   return inquirer
@@ -11,8 +11,8 @@ const start = () => {
       return generateHTML(answers);
     })
     .then(htmlData => {
-      !fs.existsSync('output') && fs.mkdirSync('output');
-      return writeToFile('./output/index.html', htmlData);
+      !fs.existsSync('dist') && fs.mkdirSync('dist');
+      return writeToFile('./dist/index.html', htmlData);
     })
     .catch(error => {
       console.log(error);
