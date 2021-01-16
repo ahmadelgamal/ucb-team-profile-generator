@@ -1,7 +1,7 @@
 const addManager = [
   {
     type: 'input',
-    name: 'team-manager-name',
+    name: 'teamManagerName',
     message: "Please enter the team manager's name:",
     validate: userInput => {
       if (userInput) {
@@ -14,7 +14,7 @@ const addManager = [
   },
   {
     type: 'input',
-    name: 'team-manager-employee-id',
+    name: 'teamManagerEmployeeId',
     message: "Please enter the team manager's employee ID:",
     validate: userInput => {
       if (userInput) {
@@ -27,7 +27,7 @@ const addManager = [
   },
   {
     type: 'input',
-    name: 'team-manager-email-address',
+    name: 'teamManagerEmailAddress',
     message: "Please enter the team-manager's email address:",
     validate: userInput => {
       if (userInput) {
@@ -40,7 +40,7 @@ const addManager = [
   },
   {
     type: 'input',
-    name: 'team-manager-office-number',
+    name: 'teamManagerOfficeNumber',
     message: "Please enter the team-manager's office number:",
     validate: userInput => {
       if (userInput) {
@@ -65,7 +65,7 @@ const next = [
 const addEngineer = [
   {
     type: 'input',
-    name: 'engineer-name',
+    name: 'engineerName',
     message: "Please enter the engineer's name:",
     validate: userInput => {
       if (userInput) {
@@ -78,7 +78,7 @@ const addEngineer = [
   },
   {
     type: 'input',
-    name: 'engineer-employee-id',
+    name: 'engineerEmployeeId',
     message: "Please enter the engineer's employee ID:",
     validate: userInput => {
       if (userInput) {
@@ -91,7 +91,7 @@ const addEngineer = [
   },
   {
     type: 'input',
-    name: 'engineer-email-address',
+    name: 'engineerEmailAddress',
     message: "Please enter the engineer's email address:",
     validate: userInput => {
       if (userInput) {
@@ -104,7 +104,7 @@ const addEngineer = [
   },
   {
     type: 'input',
-    name: 'engineer-github-username',
+    name: 'engineerGithubUsername',
     message: "Please enter the engineer's GitHub username:",
     validate: userInput => {
       if (userInput) {
@@ -120,7 +120,7 @@ const addEngineer = [
 const addIntern = [
   {
     type: 'input',
-    name: 'intern-name',
+    name: 'internName',
     message: "Please enter the intern's name:",
     validate: userInput => {
       if (userInput) {
@@ -133,7 +133,7 @@ const addIntern = [
   },
   {
     type: 'input',
-    name: 'intern-employee-id',
+    name: 'internEmployeeId',
     message: "Please enter the intern's employee ID:",
     validate: userInput => {
       if (userInput) {
@@ -146,7 +146,7 @@ const addIntern = [
   },
   {
     type: 'input',
-    name: 'intern-email-address',
+    name: 'internEmailAddress',
     message: "Please enter the intern's email address:",
     validate: userInput => {
       if (userInput) {
@@ -159,7 +159,7 @@ const addIntern = [
   },
   {
     type: 'input',
-    name: 'intern-school',
+    name: 'internSchool',
     message: "Please enter the intern's school:",
     validate: userInput => {
       if (userInput) {
