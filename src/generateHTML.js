@@ -1,35 +1,5 @@
-function generateHTML(data) {
-
-  return `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Team Profile</title>
-  </head>
-  <body>
-    <header>
-      <h1>My Team</h1>
-    </header>
-    <main class="container">
-      <div class="flex-container">
-        <article>
-          <div class="blue-bg">
-            <h3>Jared</h3>
-            <h4><i class="fas fa-mug-hot"></i> Manager</h4>
-          </div>
-          <div class="grey-bg">
-            <ul>
-              <li>ID: 1</li>
-              <li>
-                Email:
-                <a href="mailto:jared@fakemail.com">jared@fakemail.com</a>
-              </li>
-              <li>Office number: 1</li>
-            </ul>
-          </div>
-        </article>
+const generateManager = manager => {
+  return `
         <article>
           <div class="blue-bg">
             <h3>Alec</h3>
@@ -46,6 +16,11 @@ function generateHTML(data) {
             </ul>
           </div>
         </article>
+`;
+};
+
+const generateEngineers = engineers => {
+  return `
         <article>
           <div class="blue-bg">
             <h3>Grace</h3>
@@ -62,22 +37,11 @@ function generateHTML(data) {
             </ul>
           </div>
         </article>
-        <article>
-          <div class="blue-bg">
-            <h3>Tammer</h3>
-            <h4><i class="fas fa-glasses"></i> Engineer</h4>
-          </div>
-          <div class="grey-bg">
-            <ul>
-              <li>ID: 1</li>
-              <li>
-                Email:
-                <a href="mailto:tammer@fakemail.com">tammer@fakemail.com</a>
-              </li>
-              <li>GitHub: <a href="https://github.com/tammerg target="_blank"">tammerg</a></li>
-            </ul>
-          </div>
-        </article>
+`;
+};
+
+const generateInterns = interns => {
+  return `
         <article>
           <div class="blue-bg">
             <h3>John</h3>
@@ -94,6 +58,29 @@ function generateHTML(data) {
             </ul>
           </div>
         </article>
+`;
+};
+
+function generateHTML(manager, engineers, interns) {
+  return `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Team Profile</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Team</h1>
+    </header>
+    
+    <main class="container">
+      <div class="flex-container">
+        ${generateManager(manager)}
+        ${generateEngineers(engineers)}
+        ${generateInterns(interns)}        
       </div>
     </main>
 
