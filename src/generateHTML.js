@@ -20,47 +20,54 @@ const generateManager = manager => {
 };
 
 const generateEngineers = engineers => {
-  console.log('Engineers:', engineers);
-  return `
+  let engineersHTML = [];
+  for (let i = 0; i < engineers.length; i++) {
+    engineersHTML.push(`
         <article>
           <div class="blue-bg">
-            <h3>Grace</h3>
-            <h4><i class="fas fa-glasses"></i> Engineer</h4>
+            <h3>${engineers[i].getName()}</h3>
+            <h4><i class="fas fa-glasses"></i> ${engineers[i].getRole()}</h4>
           </div>
           <div class="grey-bg">
             <ul>
-              <li>ID: 1</li>
+              <li>ID: ${engineers[i].getId()}</li>
               <li>
                 Email:
-                <a href="mailto:grace@fakemail.com">grace@fakemail.com</a>
+                <a href="mailto:${engineers[i].getEmail()}">${engineers[i].getEmail()}</a>
               </li>
-              <li>GitHub: <a href="https://github.com/gchoi2u" target="_blank">gchoi2u</a></li>
+              <li>GitHub: <a href="https://github.com/${engineers[i].getGitHub()}" target="_blank">${engineers[i].getGitHub()}</a></li>
             </ul>
           </div>
         </article>
-`;
+    `);
+  }
+  return engineersHTML.join("");
 };
 
 const generateInterns = interns => {
   console.log('Interns:', interns);
-  return `
+  let internsHTML = [];
+  for (let i = 0; i < interns.length; i++) {
+    internsHTML.push(`
         <article>
           <div class="blue-bg">
-            <h3>John</h3>
-            <h4><i class="fas fa-user-graduate"></i> Intern</h4>
+            <h3>${interns[i].getName()}</h3>
+            <h4><i class="fas fa-user-graduate"></i> ${interns[i].getRole()}</h4>
           </div>
           <div class="grey-bg">
             <ul>
-              <li>ID: 1</li>
+              <li>ID: ${interns[i].getId()}</li>
               <li>
                 Email:
-                <a href="mailto:john@fakemail.com">john@fakemail.com</a>
+                <a href="mailto:${interns[i].getEmail()}">${interns[i].getEmail()}</a>
               </li>
-              <li>School: 2University</li>
+              <li>School: ${interns[i].getSchool()}</li>
             </ul>
           </div>
         </article>
-`;
+    `);
+  }
+  return internsHTML.join("");
 };
 
 function generateHTML(manager, engineers, interns) {
