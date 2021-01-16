@@ -15,8 +15,7 @@ const generateManager = manager => {
               <li>Office Number: ${manager.getOfficeNumber()}</li>
             </ul>
           </div>
-        </article>
-`;
+        </article>`;
 };
 
 const generateEngineers = engineers => {
@@ -38,14 +37,12 @@ const generateEngineers = engineers => {
               <li>GitHub: <a href="https://github.com/${engineers[i].getGitHub()}" target="_blank">${engineers[i].getGitHub()}</a></li>
             </ul>
           </div>
-        </article>
-    `);
+        </article>`);
   }
   return engineersHTML.join("");
 };
 
 const generateInterns = interns => {
-  console.log('Interns:', interns);
   let internsHTML = [];
   for (let i = 0; i < interns.length; i++) {
     internsHTML.push(`
@@ -64,8 +61,7 @@ const generateInterns = interns => {
               <li>School: ${interns[i].getSchool()}</li>
             </ul>
           </div>
-        </article>
-    `);
+        </article>`);
   }
   return internsHTML.join("");
 };
