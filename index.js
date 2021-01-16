@@ -10,18 +10,16 @@ const config = require('./package.json');
 // prints splash screen
 console.log(logo(config).render());
 
+// import classes
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 // declares variable to hold answers
 let manager = {};
 const engineers = [];
 const interns = [];
 
 const finish = () => {
-  // STARTS FOR TESTING PURPOSES ONLY
-  console.log('Manager:', manager);
-  console.log('Engineers:', engineers);
-  console.log('Interns:', interns);
-  // ENDS FOR TESTING PURPOSES ONLY
-
   const htmlData = generateHTML(manager, engineers, interns);
   !fs.existsSync('dist') && fs.mkdirSync('dist');
   return writeToFile('./dist/index.html', htmlData);
@@ -36,14 +34,16 @@ const nextAction = () => {
           return inquirer
             .prompt(addEngineer)
             .then(answers => {
-              engineers.push(answers);
+              const newEngineer = new Engineer(answers.engineerName, answers.engineerEmployeeId, answers.engineerEmailAddress, answers.engineerGithubUsername)
+              engineers.push(newEngineer);
               nextAction();
             })
         case 'Add an intern':
           return inquirer
             .prompt(addIntern)
             .then(answers => {
-              interns.push(answers);
+              const newIntern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+              interns.push(newIntern);
               nextAction();
             })
         case 'Finish building the team':
@@ -59,8 +59,9 @@ const start = () => {
   return inquirer
     .prompt(addManager)
     .then(answers => {
-      manager = answers;
+      const newManager = new Manager(answers.teamManagerName, answers.teamManagerEmployeeId, answers.teamManagerEmailAddress, answers.teamManagerOfficeNumber)
       nextAction();
+      manager = newManager;
     })
     .catch(error => {
       console.log(error);

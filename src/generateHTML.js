@@ -2,17 +2,17 @@ const generateManager = manager => {
   return `
         <article>
           <div class="blue-bg">
-            <h3>Alec</h3>
-            <h4><i class="fas fa-glasses"></i> Engineer</h4>
+            <h3>${manager.getName()}</h3>
+            <h4><i class="fas fa-glasses"></i> ${manager.getRole()}</h4>
           </div>
           <div class="grey-bg">
             <ul>
-              <li>ID: 1</li>
+              <li>ID: ${manager.getId()}</li>
               <li>
                 Email:
-                <a href="mailto:alec@fakemail.com">alec@fakemail.com</a>
+                <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
               </li>
-              <li>GitHub: <a href="https://github.com/ibealec" target="_blank">ibealec</a></li>
+              <li>Office Number: ${manager.getOfficeNumber()}</li>
             </ul>
           </div>
         </article>
@@ -20,6 +20,7 @@ const generateManager = manager => {
 };
 
 const generateEngineers = engineers => {
+  console.log('Engineers:', engineers);
   return `
         <article>
           <div class="blue-bg">
@@ -41,6 +42,7 @@ const generateEngineers = engineers => {
 };
 
 const generateInterns = interns => {
+  console.log('Interns:', interns);
   return `
         <article>
           <div class="blue-bg">
