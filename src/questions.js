@@ -133,7 +133,7 @@ const addIntern = [
   },
   {
     type: 'input',
-    name: 'internEmployeeId',
+    name: 'internId',
     message: "Please enter the intern's employee ID:",
     validate: userInput => {
       if (userInput) {
@@ -146,7 +146,7 @@ const addIntern = [
   },
   {
     type: 'input',
-    name: 'internEmailAddress',
+    name: 'internEmail',
     message: "Please enter the intern's email address:",
     validate: userInput => {
       if (userInput) {
