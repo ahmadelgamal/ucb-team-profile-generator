@@ -57,7 +57,7 @@ https://github.com/ahmadelgamal/ucb-team-profile-generator
 
 
 ## Usage
-1. Run: `npm start`.
+1. Run: `npm start` or `node index.js`.
 1. Answer the prompts.
 1. When finished, navigate to the `dist` folder.
 1. If the app ran without errors, then you should find the `index.html` file in the `dist` folder.
