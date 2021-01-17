@@ -3,7 +3,7 @@ const generateManager = manager => {
         <article>
           <div class="blue-bg">
             <h3>${manager.getName()}</h3>
-            <h4><i class="fas fa-glasses"></i> ${manager.getRole()}</h4>
+            <h4><i class="fas fa-mug-hot"></i> ${manager.getRole()}</h4>
           </div>
           <div class="grey-bg">
             <ul>
